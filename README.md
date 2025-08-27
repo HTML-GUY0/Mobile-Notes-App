@@ -3,7 +3,7 @@
 A simple yet feature-rich Notes Application built using HTML, CSS, and JavaScript.  
 It allows users to create, edit, delete, pin/unpin, and sort notes with a clean dark-blue themed UI.
 
-## Features
+# Features
 
 - Add Notes – Create and save your notes quickly.  
 - Delete Notes – Remove notes you no longer need.  
@@ -12,3 +12,9 @@ It allows users to create, edit, delete, pin/unpin, and sort notes with a clean 
 - Dark & Blue Theme – Modern theme with consistent design.  
 - Local Storage Support – Your notes stay saved even after closing the browser.  
 - Download Notes – Download your notes as an .txt file
+
+# Live Preview 
+https://html-guy0.github.io/Mobile-Notes-App/
+
+# Problem
+- The download feature doesn't work in the mobile app
