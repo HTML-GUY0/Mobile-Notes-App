@@ -14,7 +14,7 @@ It allows users to create, edit, delete, pin/unpin, and sort notes with a clean 
 - Download Notes – Download your notes as an .txt file
 
 # Live Preview 
-(https://html-guy0.github.io/Notes/)
+https://html-guy0.github.io/Notes/
 
 # Problem
 - The download feature doesn't work in the mobile app
