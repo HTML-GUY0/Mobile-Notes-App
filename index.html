@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Minimal Notes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <div class="topbar">
+      <div class="logo"><span class="dot"></span><span>Minimal Notes</span></div>
+      <div class="search">
+        <input id="search" type="search" placeholder="Search notes by title…" />
+      </div>
+    </div>
+
+    <section class="new-note">
+      <input id="new-title" type="text" placeholder="Note title (optional)" maxlength="100" />
+      <textarea id="new-content" placeholder="Note content..." rows="3"></textarea>
+      <button id="addNoteBtn">Add Note</button>
+    </section>
+
+    <section class="controls">
+      <label>
+        Sort by
+        <select id="sortOrder">
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+        </select>
+      </label>
+    </section>
+
+    <main id="notesGrid" class="grid"></main>
+  </div>
+
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <h2>Edit Note</h2>
+      <input id="edit-title" type="text" placeholder="Note title (optional)" maxlength="100" />
+      <textarea id="edit-content" placeholder="Note content..."></textarea>
+      <div class="modal-actions">
+        <button id="cancelEditBtn" class="btn secondary">Cancel</button>
+        <button id="saveEditBtn" class="btn">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

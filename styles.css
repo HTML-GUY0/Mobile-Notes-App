@@ -1,0 +1,87 @@
+:root {
+  --bg: #0f1115;
+  --surface: #141821;
+  --card: #1e2230;
+  --text: #e8eaf6;
+  --muted: #a1a8b3;
+  --accent: #7c5cff;
+  --shadow: 0 6px 20px rgba(0,0,0,.15);
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; font-family: Inter, system-ui, sans-serif; color: var(--text); background: linear-gradient(135deg, #0b0e14, #12171f, #0b0e14); }
+
+.app { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px; border-radius: var(--radius); background: rgba(255,255,255,.04); box-shadow: var(--shadow); border: 1px solid rgba(255,255,255,.06); position: sticky; top: 12px; z-index: 10; }
+.logo { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+.logo .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); display: inline-block; }
+.search input { width: 320px; padding: 10px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,.15); background: rgba(0,0,0,.25); color: var(--text); }
+@media (max-width: 700px){ .search input { width: 100%; } }
+
+.new-note { display: grid; grid-template-columns: 1fr 1fr auto; gap: 10px; align-items: end; margin: 18px 0 14px; }
+.new-note input, .new-note textarea { width: 100%; padding: 12px; border-radius: 12px; border: 1px solid rgba(255,255,255,.15); background: rgba(255,255,255,.04); color: var(--text); }
+.new-note textarea { min-height: 90px; resize: vertical; }
+.new-note button { padding: 12px 16px; border-radius: 12px; border: 0; background: linear-gradient(135deg, #7c5cff, #5a87ff); color: white; font-weight: 600; cursor: pointer; }
+@media (max-width: 900px){ .new-note { grid-template-columns: 1fr; } }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; padding-bottom: 40px; }
+.note-card { background: #1b2030; border-radius: 14px; padding: 14px; box-shadow: var(--shadow); border: 1px solid rgba(255,255,255,.08); display: flex; flex-direction: column; min-height: 180px; }
+.note-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.note-title { font-size: 16px; font-weight: 700; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 180px; }
+
+/* 🔹 Fixed Pin Button Styling */
+.pin-btn {
+  border: none;
+  background: linear-gradient(135deg, #7c5cff, #5a87ff);
+  color: white;
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.pin-btn:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+.note-content { color: #ddd; line-height: 1.5; white-space: pre-wrap; flex: 1; }
+.note-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; font-size: 12px; color: var(--muted); }
+.actions button { margin-left: 6px; padding: 6px 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,.15); background: rgba(255,255,255,.04); color: #e6e6e6; cursor: pointer; }
+.empty { grid-column: 1 / -1; text-align: center; color: var(--muted); padding: 40px 0; }
+
+.modal { position: fixed; inset: 0; background: rgba(0,0,0,.45); display: grid; place-items: center; opacity: 0; pointer-events: none; transition: opacity .2s ease; }
+.modal.is-open { opacity: 1; pointer-events: auto; }
+.modal-content { width: min(600px, 92%); background: #141821; border-radius: 12px; padding: 16px; }
+.modal-content input, .modal-content textarea { width: 100%; padding: 10px; border-radius: 10px; border: 1px solid rgba(255,255,255,.15); background: rgba(0,0,0,.25); color: var(--text); margin-bottom: 10px; }
+.modal-actions { display: flex; justify-content: flex-end; gap: 8px; }
+.btn { background: #7c5cff; color: white; font-weight: 600; padding: 8px 12px; border-radius: 8px; border: 0; cursor: pointer; }
+.btn.secondary { background: rgba(255,255,255,.08); }
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.controls select {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.15);
+  background: rgba(255,255,255,.05);
+  color: var(--text);
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.controls select:hover {
+  border-color: var(--accent);
+  background: rgba(124,92,255,0.15);
+}
