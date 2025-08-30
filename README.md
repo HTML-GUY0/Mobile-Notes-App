@@ -13,6 +13,9 @@ It allows users to create, edit, delete, pin/unpin, and sort notes with a clean 
 - Local Storage Support – Your notes stay saved even after closing the browser.  
 - Download Notes – Download your notes as an .txt file
 
+# Special
+- You can use it as an **Text to txt file converter** without creating a txt file
+
 # Live Preview 
 https://html-guy0.github.io/Notes/
 
